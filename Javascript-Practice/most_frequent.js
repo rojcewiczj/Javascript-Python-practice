@@ -17,3 +17,5 @@ function findFrequent(arr) {
 }
 
 findFrequent(["superman", "superman", "batman"])
+
+//checks to see a word in an array is used more than once
