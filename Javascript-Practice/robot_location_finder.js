@@ -1,4 +1,4 @@
-function trackRobot(...steps) {
+function trackRobot(steps) {
 	x = 0
 	y = 0
 	location = [x, y]
@@ -27,7 +27,8 @@ function trackRobot(...steps) {
 			direction = "north"
 		}
 	}
-	 return location
+	console.log(location)
 }
 
+trackRobot([20,30,10,40,20,50,60,10,45,34,24,6,7,89])
 // given an array of numbers representing steps in four directions, the function trackRobot returns the final location in [x,y] format
