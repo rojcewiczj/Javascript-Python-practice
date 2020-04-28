@@ -1,5 +1,7 @@
-S = "ADOBECODEBANC"
+S = "AABDOBECODEBANCFGHTJKLMNAJBLCASDFGAASDFHUIASDFUIHASUFHUIOASDFHAHBUDBAHDBFYHRABGDHFVBKSDFVSDBFBVBCBGYHSDCASDFFFGBCWFGTTYHBCABC"
 T = "ABC"
+
+# function for finding the shortest substring containing abc
 
 def min_window(string, sec):
     inc = 0
@@ -37,6 +39,7 @@ def min_window(string, sec):
     
     lengths.sort()
     print(lengths)
+    print(len_dict)
     print(len_dict[lengths[0]])
             
 
