@@ -1,19 +1,24 @@
-def rotLeft(a, d):
-    dictionary = {}
-    sec_dictionary = {}
 
-    for num in a:
-        dictionary[num] = a.index(num)
-    print(dictionary)
-    while d > 1:
+
+def rotLeft(a, d):
+    sec_list = []
+    dictionary={}
+    inc = -1
+    for num in range(0, len(a)):
+        inc +=1
+        sec_list.append(inc)
+        dictionary[num] = sec_list.index(sec_list[inc])
+    
+    while d > 0:
         for num in dictionary:
             if dictionary[num] == 0:
                 dictionary[num] = len(a) - 1
-            else: 
+            else:
                 dictionary[num] -= 1
-        d -= 1
-    
-    for num in dictionary:
-        a[dictionary[num]] = num
+            sec_list[dictionary[num]] = a[num]    
+        d -=1
+    print(dictionary)
+      
+    return sec_list
 
     print(a)
