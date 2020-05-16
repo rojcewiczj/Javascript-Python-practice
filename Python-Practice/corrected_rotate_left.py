@@ -1,3 +1,5 @@
+
+
 def rotLeft(a, d):
     dictionary = {}
     sec_list = []
@@ -12,4 +14,6 @@ def rotLeft(a, d):
 
      
 
-    return(sec_list)
+    print(sec_list)
+
+rotLeft([1,2,3,4,5,6], )
