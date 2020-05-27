@@ -1,9 +1,13 @@
 def sherlockAndAnagrams(s):
-    inc = 0
-    dictionary = {}
+    dictionary  = {}
+    count = 0
+    inc = 1
+    # for index, letter in enumerate(s):
+    #     if letter not in dictionary:
+    #         dictionary[letter] = [index]
+    #     else:
+    #         dictionary[letter].append(index)
     while inc < len(s):
-        
-
-        inc += 1
-    
-    print(dictionary)
+        substring = s[0: inc]
+        print(substring)
+        if substring[::-1] in 
