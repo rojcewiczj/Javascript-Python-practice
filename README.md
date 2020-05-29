@@ -1,2 +1,2 @@
 # Javascript-Python-practice
-practicing my coding skills with Edabit challenges
+practicing my coding skills with HackerRank challenges
