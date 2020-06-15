@@ -1,8 +1,19 @@
-def recursive_counter(count):
-    if count == 0:
-        return
-    print(count)
-    recursive_counter(count - 1)
+
+class Node():
+    def __init__(self, data):
+        self.data = data
+        self.left = None
 
 
-recursive_counter(5)
+first_node = Node(1)
+second_node = Node(2)
+third_node = Node(3)
+first_node.left = second_node
+second_node.left = third_node
+
+stack = []
+
+
+
+
+

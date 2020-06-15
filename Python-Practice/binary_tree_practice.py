@@ -20,15 +20,15 @@ def insert(root, node):
             insert(root.right, node)
 
 def iterative_print(root):
-    queue = []
-    queue.append(root)
-    while len(queue) > 0:
-        current = queue.pop(0)
+    stack = []
+    stack.append(root)
+    while len(stack) > 0:
+        current = stack.pop(-1)
         print(current.data)
         if current.left is not None:
-            queue.append(current.left)
+            stack.append(current.left)
         if current.right is not None:
-            queue.append(current.right)
+            stack.append(current.right)
 
 def recursive_print(root):
     if root:
@@ -37,7 +37,6 @@ def recursive_print(root):
         print(root.data)
         if root.right is not None:
             recursive_print(root.right)
-
    
     
 
