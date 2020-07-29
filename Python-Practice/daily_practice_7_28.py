@@ -1,52 +1,60 @@
-# def freqQuery(queries):
+def freqQuery(queries):
 
-#     first_dict = {}
-#     sec_dict = {}
+    first_dict = {}
+    sec_dict = {}
 
-#     def add(elem):
-#         if elem not in first_dict:
-#             first_dict[elem] = 1
-#         else:
-#             first_dict[elem] += 1
+    def add(elem):
+        if elem not in first_dict:
+            first_dict[elem] = 1
+            sec_dict[first_dict[elem]] = 1
+        else: 
+            first_dict[elem] += 1
+            sec_dict[first_dict[elem]- 1] -= 1
+            if first_dict[elem] not in sec_dict:
+                sec_dict[first_dict[elem]] = 1
+            else:
+                sec_dict[first_dict[elem]] += 1
+        
+    array = [1,2,3,4]    
+
+    for index, num in enumerate(array):
+        array[index] = num + 1
+
+    print(array)
+
     
-#         if first_dict[elem] not in sec_dict:
-#             sec_dict[first_dict[elem]] = [elem]
-#         else:
-#             sec_dict[first_dict[elem]].append(elem)
+        
+    def subtract(elem):
+        if elem not in first_dict:
+            print(0)
+        else:
+            first_dict[elem] -= 1
+            sec_dict[first_dict[elem]] += 1
+            sec_dict[first_dict[elem] + 1] -= 1
 
-#     def subtract(elem):
-#         if elem not in first_dict:
-#             print(0)
-#         else:
-#             for index, freq in enumerate(sec_dict[first_dict[elem]-1]):
-#                 if freq == elem:
-#                     sec_dict[first_dict[elem]].pop(index)
-            
-#             first_dict[elem] -= 1
-
-#     def check(freq):
-#         if freq in sec_dict:
-#             if len(sec_dict[freq]) > 0:
-#                 print(1)
-#             else:
-#                 print(0)
-#         else:
-#             print(0)
+    def check(freq):
+        if freq in sec_dict:
+            if sec_dict[freq] > 0:
+                print(1)
+            else:
+                print(0)
+        else:
+            print(0)
 
 
-#     functions = {
-#         1 : add,
-#         2 : subtract,
-#         3 : check
-#     }
+    functions = {
+        1 : add,
+        2 : subtract,
+        3 : check
+    }
 
-#     for query in queries:
-#         functions[query[0]](query[1])
+    for query in queries:
+        functions[query[0]](query[1])
 
-#     print(first_dict)
-#     print(sec_dict)
+    print(first_dict)
+    print(sec_dict)
 
-# freqQuery([[1,1],[1,1],[2,1],[1,1],[3,1]])
+freqQuery([[1,1],[1,1],[1,2],[1,2],[1,2],[3,2]])
 
 # array = [2,7,1,15] 
 # target = 9
@@ -62,16 +70,16 @@
 
 # print([y,x])
 
-array = ["eat", "tea", "hope", "opeh"]
+# array = ["eat", "tea", "hope", "opeh"]
 
-dicti = {}
+# dicti = {}
 
-for word in array:
-    sorted_string = "".join(sorted(word))
-    if sorted_string not in dicti:
-        dicti[sorted_string] = [word]
-    else:
-        dicti[sorted_string].append(word)
+# for word in array:
+#     sorted_string = "".join(sorted(word))
+#     if sorted_string not in dicti:
+#         dicti[sorted_string] = [word]
+#     else:
+#         dicti[sorted_string].append(word)
 
 
     
