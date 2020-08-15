@@ -17,16 +17,16 @@ for array in edges:
 print(dicti)
 dead_ends = []
 queue = []
-queue.append([starting_node])
+queue.append([starting_node],[1,2])
 visited = []
 
 while len(queue) > 0:
     path = queue.pop(0)
     node = path[-1]
     visited.append(node)  
-    if len(dicti[node]) == 1:
-        if dicti[node][0] == starting_node:
-            dead_ends.append(node)
+    # if len(dicti[node]) == 1:
+    #     if dicti[node][0] == starting_node:
+    #         dead_ends.append(node)
     for neighbor in dicti[node]:
         if neighbor not in visited:
             new_path = list(path)
