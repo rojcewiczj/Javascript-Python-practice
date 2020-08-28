@@ -1,19 +1,6 @@
 import random
 
 
-# array = [[1,-2,3],[4,2,-6,9]]
-# summ = 0
-
-# for arr in array:
-#     for index, el in enumerate(arr):
-#         if index == 0:
-#             minimum = el
-#         elif el < minimum:
-#             minimum = el
-#     summ += minimum
-#     minimum = 0
-
-# print(summ)
 
 class Ef:
     def __init__(self, value, mappy, map_object):
@@ -212,6 +199,7 @@ map.insert(17,12, money)
 
 elem.get_neighbors()
 map.print_map()
+print(map.dict)
 
 while running:
     elem.move(elem, enem)
