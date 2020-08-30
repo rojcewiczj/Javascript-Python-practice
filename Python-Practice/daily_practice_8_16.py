@@ -23,24 +23,5 @@ class Solution(object):
 ob = Solution()
 print(ob.largestRectangleArea())
 
-def largest_rectangle(h):
-    stack = []
-    answer = 0
-    index = 0
-    while index < len(h):
-        if len(stack) == 0 or h[index] > h[stack[-1]]:
-            stack.append(index)
-            # print(stack)
-            index += 1
-        else:
-            height = h[stack.pop(-1)]
-            if len(stack) == 0:
-                length = index 
-            if len(stack) > 0:
-                length = index - stack[-1] - 1
-            area = height * length
-            print(area)
 
 
-heights=[2,1,5,7,3,2]
-print(largest_rectangle(heights))
