@@ -1,17 +1,27 @@
 array = [1,2,3,6,3,4,6,7,3,2,9,8]
-ranges = {}
-
-for i in range(len(array)):
-    ranges[i] = [i,i]
-    for j in range(0, i):
-        if array[j] < array[i]:
-            ranges[i][0] = j
-            break
-     
-    for k in range(i , len(array)):
-        if array[k] < array[i]:
-            ranges[i][1] = k
-            break
+rectangles = {}
+i = 0
+stack = []
+ans = array[i]
+for i in range(0, len(array)):
+    if len(stack) == 0 or array[stack[-1]] <= array[i]:
+        stack.append(i)
+        i += 1
+    else:
+        height = array[stack.pop(-1)]
+        print(stack[-1])
+        print(i)
+        if len(stack) != 0:
+            size = height * (i- stack[-1] -1)
+            print(size)
+        elif len(stack) == 0:
+            size = height * i
+        if size > ans:
+            ans = size
+        print(stack)
         
 
-print(ranges)
+
+
+
+    

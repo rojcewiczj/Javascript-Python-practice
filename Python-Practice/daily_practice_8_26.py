@@ -50,7 +50,7 @@ class Ef:
             choices = ["w","s","d","a","path","path","path","path","path","path","path"]
             choice = random.choice(choices)
             dir = choice
-
+            print(path)
         if directions[dir] != "X":
             if dir =="path":
                 path.pop(0)
@@ -214,4 +214,5 @@ while running:
         running = False
 print("YOU HAVE BEEN CONSUMED!")  
 
-   
+
+
