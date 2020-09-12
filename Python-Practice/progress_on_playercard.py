@@ -39,15 +39,3 @@ def player_cards(num_of_players, deck):
     print(f"Player {winner[0] + 1} wins with {winner[1]} wins")
 
 
-
-
-
-
-
-
-    
-
-    
-
-
-player_cards(3,[1,2,5,3,1,7,8,4,6,3,9,5])
