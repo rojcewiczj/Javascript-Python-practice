@@ -1,4 +1,4 @@
-string = "aaabbccccddeefffffggghhltmmmllll"
+string = "aaabbc"
 
 def CrushIt(string):
     vision = []
