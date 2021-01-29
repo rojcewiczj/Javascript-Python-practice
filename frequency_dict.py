@@ -37,7 +37,6 @@ def every_average(scores):
        
     for player_id in my_dict:
         my_dict[player_id].sort(reverse=True) 
-        print(my_dict[player_id])
         average = 0
         total = 0
         length = 0
