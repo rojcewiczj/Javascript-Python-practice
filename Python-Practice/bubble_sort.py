@@ -1,13 +1,34 @@
-def countSwaps(a):
-    i = 1 
-    swaped = 0
-    while(i < len(a)):
-        if a[i - 1] > a[i]:
-            first_place = a[i - 1]
-            second_place = a[i]
-            a[i - 1] = second_place
-            a[i] = first_place
-            swaped += 1
-            i = 0
-        i += 1
-    print("Array is sorted in", swaped, "swaps. \n" "First Element:", a[0], "\nLast Element:", a[-1])
+
+
+
+
+def balancedOrNot():
+    stack = []
+    string = "[{[]"
+    lefts = "({["
+    dictionary = {
+        ")":'(',
+        "]":'[',
+        '}': '{'
+    }
+    for para in string:               
+        if para in lefts:
+            stack.append(para)
+        else:
+            if len(stack) == 0:
+                return False
+            else:
+                if(stack[-1] == dictionary[para]):
+                    stack.pop(-1)
+                else:
+                    return False
+
+    if len(stack) == 0:
+        return True
+    else:
+        return False
+
+print(balancedOrNot())
+            
+
+
