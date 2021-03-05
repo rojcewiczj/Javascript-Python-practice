@@ -32,6 +32,7 @@ while(len(right) > 0 ):
     left.append(right.pop())
 
 left.append(3)
+print(left)
 while(len(left) >0 ):
     right.append(left.pop())
 
