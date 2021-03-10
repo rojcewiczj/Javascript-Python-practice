@@ -16,7 +16,6 @@ class Node:
 # None None    12     3
 rootNode = Node(5)
 rootNode.left = Node(10)
-rootNode.left.left = Node(67)
 twentyFiveNode = Node(25)
 rootNode.right = twentyFiveNode
 twelveNode = Node(12)
@@ -25,8 +24,8 @@ threeNode = Node(3)
 twentyFiveNode.right = threeNode
 sixNode = Node(6)
 sevenNode = Node(7)
-# twelveNode.left = Node(30)
-# twelveNode.right = Node(40)
+twelveNode.left = Node(30)
+twelveNode.right = Node(40)
 BinaryTree = BST(rootNode)
 
 
@@ -56,15 +55,19 @@ def traverse(root):
             queue.append(None)
         i += 1
     
+  
     for i in range(0, len(levels)):
         if levels[i] not in dicti:
             dicti[levels[i]] = [return_list[i]]
+            
         else:
             dicti[levels[i]].append(return_list[i])
+        
         
    
     
     print(levels)
+    print(return_list)
     print(dicti)
     return dicti
 
