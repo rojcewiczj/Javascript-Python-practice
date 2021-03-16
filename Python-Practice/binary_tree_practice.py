@@ -5,7 +5,7 @@ class B_Node():
         self.right = None
 
 
-first_node = B_Node(5)
+first_node = B_Node(1)
 
 def insert(root, node):
     if node.data < root.data:
@@ -30,6 +30,7 @@ def iterative_print(root):
         if current.right is not None:
             stack.append(current.right)
 
+
 def recursive_print(root):
     if root:
         if root.left is not None:
@@ -37,19 +38,30 @@ def recursive_print(root):
         print(root.data)
         if root.right is not None:
             recursive_print(root.right)
-   
+    
     
 
+def breathFirst(root):
+    queue = [root] # Node(1)                                                                                                      
+    results = []                                                                                              
+    while len(queue) > 0: 
+        for node in queue:                                                   
+            print(node.data)
+        current = queue.pop(0)
+        print("current value: ", current.data)
+        results.append(current.data)
+        if current.left != None:
+            queue.append(current.left)
+        if current.right!= None:
+            queue.append(current.right)
+    print(results)
 
+first_node.left = B_Node(2)
+first_node.left.right = B_Node(3)
+first_node.right = B_Node(4)
+first_node.right.left = B_Node(5)
 
-insert(first_node, B_Node(2))
-insert(first_node, B_Node(9))
-insert(first_node, B_Node(7))
-insert(first_node, B_Node(3))
-insert(first_node, B_Node(1))
-
-
-recursive_print(first_node)
+breathFirst(first_node)
 
 
     
