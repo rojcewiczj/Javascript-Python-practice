@@ -3,7 +3,7 @@ text = "laalaxcmbdtsumbdav"
 def find(text):
     output = 0
     dicti = {}
-    word = "lambda"
+    word = "sum"
     for letter in word:
         dicti[letter] = 0
     for letter in text:
